@@ -1,0 +1,18 @@
+.image {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    background: url(../../../../src/assets/img/Vector.svg) center/100% 100% no-repeat;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.image:hover {
+    background: url(../../../../src/assets/img/Vector1.svg) center/100% 100% no-repeat;
+}
+.right {
+    transform: rotate(180deg);
+}
+
+.disabled {
+    pointer-events: none;
+}

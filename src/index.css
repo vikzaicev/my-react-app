@@ -1,0 +1,15 @@
+:root {
+  --gradient: linear-gradient(to right, #ab5bfb, #7690ea);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(126, 49, 49, 0.87);
+  background-image: linear-gradient(to right, #faf6ff, #f3f5ff);
+  margin: 30px;
+}
+
+h1 {
+  margin: 0;
+}
