@@ -21,9 +21,9 @@ export const Input = () => {
 
     return (
         <div className="form">
-            <input type="text" className="input" onChange={onChangeName} />
-            <input type="password" className="input" onChange={onChangePassword} />
-            <p>Ваше имя {data.name}, пароль {data.password}</p>
+            <input type="text" className="input" onChange={onChangeName} placeholder="Имя" />
+            <input type="password" className="input" onChange={onChangePassword} placeholder="Параль" />
+            <p>Ваше имя <span className="span">{data.name}</span>, пароль <span className="span">{data.password}</span></p>
         </div>
     )
 }
