@@ -8,11 +8,15 @@ export function Controls({ direction, disabled }) {
     if (direction === "left") cls += " left";
     if (direction === "right") cls += " right";
     if (disabled) cls += " disabled";
-    console.log(cls);
+
+    const onClickHandler = (event) => {
+        console.log("lo", event.target);
+
+    }
 
     return (
 
-        <div className={cls}></div>
+        <div className={cls} onClick={onClickHandler}></div>
 
     )
 }
