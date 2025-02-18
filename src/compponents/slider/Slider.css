@@ -1,15 +1,20 @@
 .slider {
     display: flex;
-    width: 90vw;
+    /* width: 90vw; */
     gap: 15px;
+    @media (max-width: 780px) {
+        gap: 10px;
+    }
 }
+
 .slide {
     flex: 1;
     flex-grow: 1;
-    height: 600px;
+    height: 50vw;
     border-radius: 10px;
     overflow: hidden;
     border: 3px solid #6666;
+    transition: all 0.3s ease;
 }
 
 .slide img {
@@ -20,4 +25,5 @@
 
 .slide.activ {
     flex-grow: 3;
+    transition: all 0.3s ease;
 }
