@@ -1,0 +1,11 @@
+.NavLink {
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border: 2px solid #556855;
+    border-radius: 10px;
+    background-color: aquamarine;
+    transition: all 0.3s ease-in;
+}
+.NavLink:hover {
+    background-color: rgb(117, 203, 174);
+}

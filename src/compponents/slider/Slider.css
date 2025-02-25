@@ -5,6 +5,9 @@
     @media (max-width: 780px) {
         gap: 10px;
     }
+    @media (max-width: 426px) {
+        gap: 5px;
+    }
 }
 
 .slide {
@@ -15,15 +18,21 @@
     overflow: hidden;
     border: 3px solid #6666;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .slide img {
     width: 105%;
     height: 105%;
     object-fit: cover;
+    pointer-events: none;
 }
 
 .slide.activ {
     flex-grow: 3;
     transition: all 0.3s ease;
+    cursor: default;
+    @media (max-width: 426px) {
+        flex-grow: 4;
+    }
 }
