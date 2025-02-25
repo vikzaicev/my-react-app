@@ -9,6 +9,45 @@ import "./Slider.css"
 import { Controls } from "../BlockInfo/Controls/Controls"
 
 export const Slider = () => {
+    const DATA = [
+        {
+            title: "CEO AND COFOUNDER, ARKETA",
+            name: "Rachel Lea Fishman",
+            foto: foto1,
+            id: 0
+        },
+        {
+            title: "CEO AND CO-FOUNDER, FORMA",
+            name: "Jason Fan",
+            foto: foto2,
+            id: 1
+        },
+        {
+            title: "CEO, OPENAI",
+            name: "Sam Altman",
+            foto: foto3,
+            id: 2
+        },
+        {
+            title: "SVP OF PRODUCT, JOBBER",
+            name: "Jeff Sheclock",
+            foto: foto4,
+            id: 3
+        },
+        {
+            title: "HEAD OF STRATEGY, SARDINE",
+            name: "Simon Taylor",
+            foto: foto5,
+            id: 4
+        },
+        {
+            title: "HEAD OF GLOBAL SALES, STRIPE",
+            name: "Eileen O'Mara",
+            foto: foto6,
+            id: 5
+        },
+    ]
+
     const data = [foto1, foto2, foto3, foto4, foto5, foto6]
     const [activId, setActivId] = useState(0)
 
@@ -54,9 +93,13 @@ export const Slider = () => {
                 />
             </div>
             <div className="slider">
-                {data.map((slide, index) => (
-                    <div className={`slide ${index == activId ? 'activ' : ''}`} key={index} id={index} onClick={activIdHandler}>
-                        <img src={slide} alt="foto" className="" />
+                {DATA.map(({ title, name, foto, id }, index) => (
+                    <div className={`slide ${index == activId ? 'activ' : ''}`} key={id} id={id} onClick={activIdHandler}>
+                        <img src={foto} alt="foto" className="" />
+                        <div className="discr">
+                            <div className="title1">{title}</div>
+                            <div className="name">{name}</div>
+                        </div>
                     </div>
 
                 ))}

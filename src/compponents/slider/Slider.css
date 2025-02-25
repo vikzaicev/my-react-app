@@ -11,6 +11,7 @@
 }
 
 .slide {
+    position: relative;
     flex: 1;
     flex-grow: 1;
     height: 50vw;
@@ -19,6 +20,9 @@
     border: 3px solid #6666;
     transition: all 0.3s ease;
     cursor: pointer;
+    @media (max-width: 426px) {
+        height: 60vw;
+    }
 }
 
 .slide img {
@@ -34,5 +38,36 @@
     cursor: default;
     @media (max-width: 426px) {
         flex-grow: 4;
+    }
+}
+.slide.activ {
+    .discr {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        @media (max-width: 426px) {
+            top: 5px;
+            left: 5px;
+        }
+    }
+}
+.title1 {
+    white-space: nowrap;
+    @media (max-width: 426px) {
+        font-size: 14px;
+        white-space: wrap;
+    }
+    @media (max-width: 376px) {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+.name {
+    white-space: nowrap;
+    color: black;
+    width: bold;
+    @media (max-width: 426px) {
+        font-size: 14px;
+        white-space: wrap;
     }
 }
