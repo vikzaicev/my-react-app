@@ -39,6 +39,9 @@
     @media (max-width: 426px) {
         flex-grow: 4;
     }
+    @media (max-width: 376px) {
+        flex-grow: 6;
+    }
 }
 .slide.activ {
     .discr {

@@ -7,6 +7,7 @@ import foto6 from "../../../src/assets/img/image6Big.png"
 import { useState } from "react"
 import "./Slider.css"
 import { Controls } from "../BlockInfo/Controls/Controls"
+import { User } from "../../Class/Class"
 
 export const Slider = () => {
     const DATA = [
@@ -51,17 +52,24 @@ export const Slider = () => {
     const data = [foto1, foto2, foto3, foto4, foto5, foto6]
     const [activId, setActivId] = useState(0)
 
+
     const activIdHandler = (e) => {
         setActivId(activId => activId = Number(e.target.id))
+
+        new User().newUser(e.target.id, DATA)
     }
 
     const prev = () => {
         setActivId(activId => {
             if (activId > 0) {
+                new User().newUser(activId - 1, DATA)
                 return activId - 1
+
             }
             if (activId == 0) {
+                new User().newUser(data.length - 1, DATA)
                 return activId = data.length - 1
+
             }
             return activId
         })
